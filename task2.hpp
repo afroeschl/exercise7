@@ -1,0 +1,88 @@
+/// @file
+/// @brief Task2: Function Declaration & Definitions
+
+#pragma once
+
+#include <cstddef> // std::size_t
+#include <set>     // std::set
+#include <vector>  // std::vector
+
+namespace task2 {
+
+/// @brief Sums the values
+/// @param vec sequence of values
+/// @return Sum of all values in the sequence
+/// @todo Adjust the function to accept a vector of arbitrary types:
+///       - You can assume that the arbitrary type supports the += operator
+///       - You need to uncomment respective lines in task2.test.cpp to test your implementation.
+
+inline int sum(const std::vector<int>& vec) {
+  int sum{}; // inits with '0'
+
+  for (const int& x : vec) {
+    sum += x;
+  }
+
+  return sum;
+}
+
+/// @brief Finds the minimum value
+/// @param vec Sequence of values (assume size() >= 1)
+/// @return Minimum value in the sequence
+/// @todo Adjust the function to accept a vector of arbitrary types:
+///       - You can assume that the arbitrary type supports the '<' operator
+///       - You need to uncomment respective lines in task2.test.cpp to test your implementation.
+
+inline int min(const std::vector<int>& vec) {
+  int min = vec.front();
+
+  for (const int& x : vec) {
+    if (x < min) {
+      min = x;
+    }
+  }
+
+  return min;
+}
+
+/// @brief Finds the number of unique values
+/// @param vec Sequence of values
+/// @return Number of unique values in the sequence
+/// @todo Adjust the function to accept a vector of arbitrary types:
+///       - You can assume that the arbitrary type can be inserted into a std::set (i.e. is less-compareable)
+///       - You need to uncomment respective lines in task2.test.cpp to test your implementation.
+
+inline std::size_t count_unique(const std::vector<int>& vec) {
+  std::set<int> unique;
+
+  for (const int& x : vec) {
+    unique.insert(x);
+  }
+
+  return unique.size();
+}
+
+
+/// @brief Generates a range of equidistant values in an interval
+/// @param start Start of the interval
+/// @param end End of the interval
+/// @param N number of values to generate
+/// @return Sequence of equidistant values
+/// @todo Adjust the function to accept any type (noy only 'float'):
+///       - You can assume that the arbitrary type support arithmetic operations
+///       - You need to uncomment respective lines in task2.test.cpp to test your implementation.
+
+inline std::vector<float> range(float start, float end, unsigned int N) {
+  std::vector<float> rtn;
+  const float step = (end - start) / (N - 1);
+
+  for (auto n = 0u; n < N; ++n) {
+    rtn.emplace_back(start + step * n);
+  }
+
+  return rtn;
+}
+
+
+
+} // namespace task2
