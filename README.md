@@ -1,6 +1,6 @@
 # Hausübung 7 (2 Punkte)
 
-**Ausgabe**: Dienstag 6. April, vormittags. 
+**Ausgabe**: Dienstag 6. Mai, vormittags. 
 
 **Abgabe bis**: Montag 20. Mai, Ende des Tages.
 
@@ -13,6 +13,6 @@ Details zum Abgabeprozess via `git` finden Sie hier: https://sgit.iue.tuwien.ac.
 In dieser Hausübung werden folgende Themen erstmalig einfliessen:
 
 - Arbeiten mit generischen Funktionen/Klassen (*templates*)
-- Implementierung einer Klasse, die den Anforderungen eine gegebenen Template-Schnittstelle (*concept*) erfüllt
+- Implementierung einer Klasse, die den Anforderungen einer gegebenen Template-Schnittstelle (*concept*) erfüllt
 
 **Die genaue Beschreibung und Anforderungen finden Sie in [`main.ipynb`](main.ipynb) und im Quellcode.**
