@@ -2,7 +2,7 @@
 
 **Ausgabe**: Dienstag 6. Mai, vormittags. 
 
-**Abgabe bis**: Montag 20. Mai, Ende des Tages.
+**Abgabe bis**: Montag 19. Mai, Ende des Tages.
 
 **Abgabe via**: git-Repository mit dem Namen **`exercise7`** auf unserem git-Server https://sgit.iue.tuwien.ac.at
 
