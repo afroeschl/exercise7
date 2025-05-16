@@ -2,6 +2,9 @@
 /// @brief Task1: "single-file" executable C++ program
 
 /// @todo Include standard library headers as needed
+#include <iostream>
+#include <string>
+#include <vector>
 
 namespace task1 {
 
@@ -22,4 +25,22 @@ namespace task1 {
 /// - fill a std::vector<std::string> with with the following sequence of values
 ///   "e", "lec", "tro", "mag", "net", "ic"
 /// - use your function to print both vectors to the console separately
-int main() { return 0; }
+
+template <typename T> class Print {
+public:
+  void print(std::vector<T> vec) {
+    for (const auto& element : vec) {
+      std::cout << element << ' ';
+    }
+    std::cout << std::endl;
+  }
+};
+int main() {
+  Print<int> intPrinter;
+  Print<std::string> strPrinter;
+
+  std::vector<int> intVec = {3, 6, 0, 0, 5, 0};
+  std::vector<std::string> strVec = {"e", "lec", "tro", "mag", "net", "ic"};
+  intPrinter.print(intVec);
+  strPrinter.print(strVec);
+}
